@@ -1,0 +1,31 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/empregado" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{empregado._id}}">
+    <div class="form-group">
+        <label>Nome Completo</label>
+        <input type="text" class="form-control" name="nomecompleto" placeholder="Nome Completo" value="{{empregado.nomecompleto}}">
+        <div class="text-danger">
+            {{empregado.nomecompletoError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Email" value="{{empregado.email}}">
+        <div class="text-danger">
+            {{empregado.emailError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Telefone</label>
+            <input type="text" class="form-control" name="" placeholder="Telefone" value="{{empregado.telefone}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Cidade</label>
+            <input type="text" class="form-control" name="cidade" placeholder="Cidade" value="{{empregado.cidade}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/empregado/list"><i class="fa fa-list-alt"></i> Ver todos</a>
+    </div>
+</form>

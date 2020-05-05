@@ -1,0 +1,38 @@
+<h3><a class="btn btn-secondary" href="/empregado"><i class="fa fa-plus"></i> Criar nova</a> Lista Empregado</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome Completo</th>
+            <th>CPF</th>
+            <th>Telefone</th>
+			<th>Email</th>
+            <th>Estado</th>
+			<th>Cidade</th>
+			<th>CEP</th>
+			<th>Endereço</th>
+			<th>Complemento</th>
+			<th>Observações</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.nomecompleto}}</td>
+            <td>{{this.cpf}}</td>
+            <td>{{this.telefone}}</td>
+			<td>{{this.email}}</td>
+            <td>{{this.estado}}</td>
+            <td>{{this.cidade}}</td>
+			<td>{{this.cep}}</td>
+			<td>{{this.endereco}}</td>
+			<td>{{this.complemento}}</td>
+			<td>{{this.observacoes}}</td>
+            <td>
+                <a href="/empregado/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/empregado/delete/{{this._id}}" onclick="return confirm('Tem certeza que deseja deletar?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
